@@ -1,0 +1,8 @@
+.main-background {
+  background-image: url('../../../public/images/main-bg.webp');
+  background-position: center center;
+  background-size: cover;
+}
+.main-backdrop {
+  background-image: linear-gradient(180deg, #00000045 50%, #00000045 50%);
+}

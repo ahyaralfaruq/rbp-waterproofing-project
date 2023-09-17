@@ -1,0 +1,19 @@
+.nav-collapse {
+  flex-grow: 1;
+  flex-basis: 100%;
+  transition: opacity 200ms linear 0s;
+}
+.collapsing:not(.show) {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .button-menu {
+    display: none;
+  }
+  .nav-collapse.collapsing {
+    display: flex;
+    flex-basis: auto;
+  }
+}
+
