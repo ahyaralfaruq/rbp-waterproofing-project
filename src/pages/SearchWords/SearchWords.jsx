@@ -22,7 +22,7 @@ const SearchWords = ({getSlugOfQuery}) => {
 
       <div>
         {
-          filterData ? filterData.map((data, keys) => (
+          filterData.length !== 0 ? filterData.map((data, keys) => (
             <article key={keys} className='border-t-2 border-green-700 pt-4'>
               <Link to={`/articles/${data.id}`} className='flex flex-col lg:flex-row mb-12'>
                 <div className="aspect-square w-full h-full md:w-64 lg:w-48 shrink-0 md:mx-auto md:mb-12 overflow-hidden">
@@ -35,7 +35,7 @@ const SearchWords = ({getSlugOfQuery}) => {
                       {data.title}
                     </h3>
                     <p className="text-sm text-gray-400 mb-3">
-                      { data.created_at }
+                      { data.createdAt }
                     </p>
                   </div>
 
@@ -50,7 +50,10 @@ const SearchWords = ({getSlugOfQuery}) => {
             </article>
           )) : (
             <div className="w-full h-full aspect-square flex items-center justify-center">
-              <p className="text-sm md:text-base font-bold">Search not found</p>
+              <div className='text-center'>
+                <h1 className="text-6xl md:text-8xl font-bold">404</h1>
+                <p className="text-sm md:text-base font-bold">Search not found</p>
+              </div>
             </div>
           )
         }

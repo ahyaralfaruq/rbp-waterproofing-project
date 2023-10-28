@@ -1,85 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import DataDummyArticles from '../../data/articles.json'
+import { Pagination } from '@mui/material'
 
 const ContentArticles = () => {
-  // const dummy = [
-  //   {
-  //     id: 1,
-  //     image: 'images/main-bg.webp',
-  //     title: 'Jasa pasang membran bakar Jakarta Selatan',
-  //     subtitle: `Dengan semakin maraknya pembangunan gedung-gedung bertingkat saat ini dan dengan arsitektur 
-  //     serta teknologi yang serba modern pula.`,
-  //     desc: `<p>Dengan semakin maraknya pembangunan gedung-gedung bertingkat saat ini dan dengan arsitektur 
-  //     serta teknologi yang serba modern pula. menuntut kami kami untuk menyediakan jasa pendukung terhadap ketahanan 
-  //     bangunan-bangunan tersebut seperti waterproofing membrane, grouting, flooring hardener, 
-  //     perawatan swimming pool (kolam renang) dan lain-lain. berusaha memberikan kualitas dan layanan maksimal untuk setiap pekerjaan kami. 
-  //     Memberikan garansi 5 hingga 15 tahun untuk setiap project yang kami kerjakan, dengan tenaga ahli 
-  //     yang profesional di bidangnya serta memiliki sertifikasi untuk tenaga ahli dalam setiap masing masing project. 
-  //     kami mengajak anda untuk berkonsultasi kepada kami pada setiap permasalahan waterproofing / kebocoran pada beton</p>`,
-  //     created_at: "27 juli 2023 09:00:45"
-  //   },
-  //   {
-  //     id: 2,
-  //     image: 'images/main-bg.webp',
-  //     title: 'Jasa pasang membran bakar Jakarta Utara',
-  //     subtitle: `Dengan semakin maraknya pembangunan gedung-gedung bertingkat saat ini dan dengan arsitektur 
-  //     serta teknologi yang serba modern pula.`,
-  //     desc: `Dengan semakin maraknya pembangunan gedung-gedung bertingkat saat ini dan dengan arsitektur 
-  //     serta teknologi yang serba modern pula. menuntut kami kami untuk menyediakan jasa pendukung terhadap ketahanan 
-  //     bangunan-bangunan tersebut seperti waterproofing membrane, grouting, flooring hardener, 
-  //     perawatan swimming pool (kolam renang) dan lain-lain. berusaha memberikan kualitas dan layanan maksimal untuk setiap pekerjaan kami. 
-  //     Memberikan garansi 5 hingga 15 tahun untuk setiap project yang kami kerjakan, dengan tenaga ahli 
-  //     yang profesional di bidangnya serta memiliki sertifikasi untuk tenaga ahli dalam setiap masing masing project. 
-  //     kami mengajak anda untuk berkonsultasi kepada kami pada setiap permasalahan waterproofing / kebocoran pada beton`,
-  //     created_at: "27 juli 2023 18:00:45"
-  //   },
-  //   {
-  //     id: 3,
-  //     image: 'images/main-bg.webp',
-  //     title: 'Jasa pasang membran bakar Jakarta Barat',
-  //     subtitle: `Dengan semakin maraknya pembangunan gedung-gedung bertingkat saat ini dan dengan arsitektur 
-  //     serta teknologi yang serba modern pula.`,
-  //     desc: `Dengan semakin maraknya pembangunan gedung-gedung bertingkat saat ini dan dengan arsitektur 
-  //     serta teknologi yang serba modern pula. menuntut kami kami untuk menyediakan jasa pendukung terhadap ketahanan 
-  //     bangunan-bangunan tersebut seperti waterproofing membrane, grouting, flooring hardener, 
-  //     perawatan swimming pool (kolam renang) dan lain-lain. berusaha memberikan kualitas dan layanan maksimal untuk setiap pekerjaan kami. 
-  //     Memberikan garansi 5 hingga 15 tahun untuk setiap project yang kami kerjakan, dengan tenaga ahli 
-  //     yang profesional di bidangnya serta memiliki sertifikasi untuk tenaga ahli dalam setiap masing masing project. 
-  //     kami mengajak anda untuk berkonsultasi kepada kami pada setiap permasalahan waterproofing / kebocoran pada beton`,
-  //     created_at: "28 juli 2023 03:00:45"
-  //   },
-  //   {
-  //     id: 4,
-  //     image: 'images/main-bg.webp',
-  //     title: 'Jasa pasang membran bakar Jakarta Timur',
-  //     subtitle: `Dengan semakin maraknya pembangunan gedung-gedung bertingkat saat ini dan dengan arsitektur 
-  //     serta teknologi yang serba modern pula.`,
-  //     desc: `Dengan semakin maraknya pembangunan gedung-gedung bertingkat saat ini dan dengan arsitektur 
-  //     serta teknologi yang serba modern pula. menuntut kami kami untuk menyediakan jasa pendukung terhadap ketahanan 
-  //     bangunan-bangunan tersebut seperti waterproofing membrane, grouting, flooring hardener, 
-  //     perawatan swimming pool (kolam renang) dan lain-lain. berusaha memberikan kualitas dan layanan maksimal untuk setiap pekerjaan kami. 
-  //     Memberikan garansi 5 hingga 15 tahun untuk setiap project yang kami kerjakan, dengan tenaga ahli 
-  //     yang profesional di bidangnya serta memiliki sertifikasi untuk tenaga ahli dalam setiap masing masing project. 
-  //     kami mengajak anda untuk berkonsultasi kepada kami pada setiap permasalahan waterproofing / kebocoran pada beton`,
-  //     created_at: "28 juli 2023 12:00:45"
-  //   },
-  //   {
-  //     id: 5,
-  //     image: 'images/main-bg.webp',
-  //     title: 'Jasa pasang membran bakar Jakarta Pusat',
-  //     subtitle: `Dengan semakin maraknya pembangunan gedung-gedung bertingkat saat ini dan dengan arsitektur 
-  //     serta teknologi yang serba modern pula.`,
-  //     desc: `Dengan semakin maraknya pembangunan gedung-gedung bertingkat saat ini dan dengan arsitektur 
-  //     serta teknologi yang serba modern pula. menuntut kami kami untuk menyediakan jasa pendukung terhadap ketahanan 
-  //     bangunan-bangunan tersebut seperti waterproofing membrane, grouting, flooring hardener, 
-  //     perawatan swimming pool (kolam renang) dan lain-lain. berusaha memberikan kualitas dan layanan maksimal untuk setiap pekerjaan kami. 
-  //     Memberikan garansi 5 hingga 15 tahun untuk setiap project yang kami kerjakan, dengan tenaga ahli 
-  //     yang profesional di bidangnya serta memiliki sertifikasi untuk tenaga ahli dalam setiap masing masing project. 
-  //     kami mengajak anda untuk berkonsultasi kepada kami pada setiap permasalahan waterproofing / kebocoran pada beton`,
-  //     created_at: "27 juli 2023 21:43:45"
-  //   },
-  // ]
+  const perPage = 3
+  const count = Math.ceil(DataDummyArticles.data.length / perPage)
 
   return (
     <>
@@ -97,7 +23,7 @@ const ContentArticles = () => {
                     {data.title}
                   </h3>
                   <p className="text-sm text-gray-400 mb-3">
-                    { data.created_at }
+                    { data.createdAt }
                   </p>
                 </div>
 
@@ -113,8 +39,8 @@ const ContentArticles = () => {
         ))
       }
 
-      <div className="flex justify-center">
-        Pagination
+      <div className="flex items-center justify-center">
+        <Pagination count={count}  />
       </div>
     </>
   )

@@ -1,5 +1,5 @@
 import './App.css';
-import { Header } from './widgets';
+import { Footer, Header } from './widgets';
 import MainRoutes from './routes/routes';
 import { WhatsappContact } from './components';
 
@@ -9,6 +9,7 @@ function App() {
       <Header />
       <MainRoutes />
       <WhatsappContact />
+      <Footer />
     </div>
   );
 }

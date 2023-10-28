@@ -101,7 +101,7 @@ const Article = () => {
                 {getDataById[0].title}
               </h3>
               <p className="text-sm text-gray-400 mb-3">
-                { getDataById[0].created_at }
+                { getDataById[0].createdAt }
               </p>
             </div>
 
